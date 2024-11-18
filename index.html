@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <title>Document</title>
+    <style>
+        .answer{
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="w-50 shadow bg-success rounded p-3 m-auto">
+        <h1>Little Calculator</h1>
+        <div class="input-box d-flex">
+            <input type="text" class="form-control w-40 p-2" name="" id="firstdig">
+            <input type="text" class="form-control w-40 p-2" name="" id="seconddig">
+        </div>
+
+        <button onclick="add()" class="btn btn-danger mt-3">+</button>
+        <button onclick="subtract()" class="btn btn-danger mt-3">-</button>
+        <button onclick="multiply()" class="btn btn-danger mt-3">*</button>
+        <button onclick="divide()" class="btn btn-danger mt-3">/</button>
+        <button onclick="modulus()" class="btn btn-danger mt-3">%</button>
+        <button onclick="exponential()" class="btn btn-danger mt-3">^</button>
+        <div class="answer w-100 rounded mt-3"></div>
+
+
+    </main>
+</body>
+
+</html>
+
+<script>
+    let firstDigt = document.getElementById("firstdig");
+    let secondDigt = document.getElementById("seconddig");
+    let answer = document.querySelector(".answer");
+
+    function add() {
+        answer.innerHTML = Number(firstDigt.value) + Number(secondDigt.value)
+    }
+    function subtract() {
+        answer.innerHTML = Number(firstDigt.value) - Number(secondDigt.value)
+    }
+    function multiply() {
+        answer.innerHTML = Number(firstDigt.value) * Number(secondDigt.value)
+    }
+    function divide() {
+        answer.innerHTML = Number(firstDigt.value) / Number(secondDigt.value)
+    }
+    function modulus() {
+        answer.innerHTML = Number(firstDigt.value) % Number(secondDigt.value)
+    }
+    function exponential() {
+        answer.innerHTML = Number(firstDigt.value) ** Number(secondDigt.value)
+    }
+   
+
+</script>
